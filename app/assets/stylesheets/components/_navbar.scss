@@ -1,0 +1,129 @@
+// ------------------------------- NAVIGATION -------------------------------
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* width: 100%; */
+  border-bottom: 1px solid gray;
+  background-color: $gold;
+  padding: 0 20px 0 0;
+  box-shadow: 0 2px 4px 1px rgba(0, 0, 0, 0.2);
+
+  .logo-section {
+    #logo {
+      width: auto;
+      height: 80px;
+      filter: brightness(120%);
+
+      &:hover {
+        // filter: brightness(125%);
+        filter: brightness(140%);
+      }
+    }
+  }
+
+  .green {
+    background-color: green;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+
+
+
+// ------------------------------- LEFT MENU -------------------------------
+#menu-toggle {
+  /* CHECKBOX TO HOLD MENU OPEN */
+  opacity: 0;
+}
+
+#menu-toggle:checked+.menu-btn>span {
+  transform: rotate(45deg);
+}
+
+#menu-toggle:checked+.menu-btn>span::before {
+  top: 0;
+  transform: rotate(0deg);
+}
+
+#menu-toggle:checked+.menu-btn>span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+#menu-toggle:checked~.menu-box {
+  left: 0 !important;
+}
+
+/* .menu-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 1;
+  } */
+.menu-btn {
+  position: fixed;
+  top: 40px;
+  left: 20;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.menu-btn>span,
+.menu-btn>span::before,
+.menu-btn>span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: $white;
+  transition-duration: .25s;
+}
+
+.menu-btn>span::before {
+  content: '';
+  top: -8px;
+}
+
+.menu-btn>span::after {
+  content: '';
+  top: 8px;
+}
+
+.menu-box {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 300px;
+  height: 100%;
+  margin: 0;
+  padding: 80px 0;
+  list-style: none;
+  background-color: $green;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
+  transition-duration: .25s;
+}
+
+.menu-item {
+  display: block;
+  padding: 12px 24px;
+  color: $white;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition-duration: .25s;
+}
+
+.menu-item:hover {
+  background-color: $white;
+  color: $green;
+}

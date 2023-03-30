@@ -1,0 +1,33 @@
+// ------------------------------- FOOTER -------------------------------
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: $green;
+  box-shadow: 0 -2px 4px 1px rgba(0, 0, 0, 0.2);
+  padding: 25px 0;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  .footer-section {
+    display: flex;
+    flex-direction: column;
+    a {
+      color: $white;
+      opacity: 0.8;
+      text-decoration: none;
+      &:hover {
+        color: $white;
+        opacity: 1;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .footer-header {
+    color: $white;
+    text-transform: uppercase;
+  }
+}
