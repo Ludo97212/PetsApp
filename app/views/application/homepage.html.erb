@@ -1,0 +1,49 @@
+<section class="container">
+  <main>
+    <section class="x">
+      <h1>Ceci est un titre H1</h1>
+      <h2>Ceci est un titre h2</h2>
+      <p>Ut a nisl id ante tempus hendrerit. Donec interdum, metus et hendrerit aliquet, dolor diam sagittis ligula, eget egestas libero turpis vel mi. Etiam rhoncus. Quisque ut nisi. Fusce fermentum.
+        Ut non enim eleifend felis pretium feugiat. Sed lectus. Phasellus viverra nulla ut metus varius laoreet. Fusce ac felis sit amet ligula pharetra condimentum. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</p>
+      <h3>Ceci est un titre h3</h3>
+      <h4>Ceci est un titre h4</h4>
+    </section>
+
+    <section class="x">
+      <%= link_to "test", species_path %>
+
+      <h2>3 last pets</h2>
+        <% @last_3_pets.each do |pet|%>
+          <p>[<%= pet.name %> | <%= pet.specy.name %>]</p>
+        <% end %>
+
+      <h2>All dogs</h2>
+        <% @dogs.each do |dog|%>
+          <p>[<%= dog.name %> | <%= dog.specy.name %>]</p>
+        <% end %>
+
+        <h2>All cats</h2>
+        <% @cats.each do |cat|%>
+          <p>[<%= cat.name %> | <%= cat.specy.name %>]</p>
+        <% end %>
+
+        <h2>All birds</h2>
+        <% @birds.each do |bird|%>
+          <p>[<%= bird.name %> | <%= bird.specy.name %>]</p>
+        <% end %>
+
+        <h2>All turtles</h2>
+        <% @turtles.each do |turtle|%>
+          <p>[<%= turtle.name %> | <%= turtle.specy.name %>]</p>
+        <% end %>
+
+        <h2>All bunnys</h2>
+        <% @bunnys.each do |bunny|%>
+          <p>[<%= bunny.name %> | <%= bunny.specy.name %>]</p>
+        <% end %>
+    </section>
+
+    <aside>
+    </aside>
+  </main>
+</section>

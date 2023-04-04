@@ -10,7 +10,19 @@ class ApplicationController < ActionController::Base
   end
 
   # pour page test
-  def home1
+  def homepage
+    # PETS
+    @pets = Pet.all
+    @last_3_pets = Pet.limit(3)
+    @last_5_pets = Pet.limit(5)
+    @dogs = Pet.joins(:specy).where(species: { id: 1 })
+    @cats = Pet.joins(:specy).where(species: { id: 2 })
+    @birds = Pet.joins(:specy).where(species: { id: 3 })
+    @turtles = Pet.joins(:specy).where(species: { id: 4 })
+    @bunnys = Pet.joins(:specy).where(species: { id: 5 })
+
+    # SPECIES
+    @species = Specy.all
   end
 
 end
